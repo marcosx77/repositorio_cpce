@@ -12,6 +12,55 @@
   border: 1px solid black;
 }
 
+/*encabezado de pagina esto es igual para todos los html de este proyecto*/
+.redes{
+  border-bottom: solid 1px rgb(196, 190, 190);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2px;
+}
+.redes_opaciti:hover {filter: opacity(.6);}
+
+.menu{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.menu ul{
+  list-style: none;
+}
+.menu ul li{
+  display: inline-block;
+}
+
+.menu a{
+  display: block;
+  padding: 0.52rem 1rem;
+  color: rgb(77, 73, 73);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 10% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: all 0.1s linear;
+}
+.menu  a:hover, a:focus {
+  background-size: 90% 2px;
+}
+.menu_logo{
+padding-left: 20px;
+}
+.auto a{
+  background-image:none;
+}
+.auto:hover {filter: opacity(.6);}
+/* hasta aca el encabezado*/
+
+/*CONFIGURACION DE MEDIA QUERIS PARA QUE LA PANTALLA SE ADAPTATIVA*/
   .grid-1 {
     display: grid;
     width: 100%;
@@ -25,9 +74,10 @@
                             "main"
                             "footer";
   }
-  
+
+
   /*Acá empiezo a definir las reglas para los diferentes tamaños de pantalla. Solo especifico lo que cambia, lo que se mantiene no hace falta volver a declararlo*/
-@media screen and (min-width:768px){
+  @media screen and (min-width:768px){
     .grid-1{
         display: grid;
         width: 100%;
@@ -96,7 +146,9 @@
     /*max-height: 30%;*/
     margin: 0 auto;
 }
+/* HASTA ACA LA DEFINICION DE GRILLAS SEGUN LA PANTALLA QUE ESTE VIENDO LA PAGINA*/
 
+/*GRILLA PARA EL HTML Matriculacion*/
   .GrillaMatri{
     /*background-color: aquamarine; */
     padding-top: 5px;
@@ -125,13 +177,8 @@
     padding-left: 20px;
 }
 
-.img2_1:hover {-webkit-transform:scale(1.02);transform:scale(1.02);transition-duration: 0.9s;filter: grayscale(80%)}
-.img2_1 {overflow:hidden;}
-
-.img2_2:hover {-webkit-transform:scale(1.02);transform:scale(1.02);transition-duration: 0.9s;filter: grayscale(80%)}
-.img2_2 {overflow:hidden;}
-.img2_3:hover {-webkit-transform:scale(1.02);transform:scale(1.02);transition-duration: 0.9s;filter: grayscale(80%)}
-.img2_3 {overflow:hidden;}
+.img_matri:hover {-webkit-transform:scale(1.02);transform:scale(1.02);transition-duration: 0.9s;filter: grayscale(80%)}
+.img_matri {overflow:hidden;}
 
 
 #img3{
@@ -157,6 +204,30 @@
   justify-content:center;
   align-items:center;
 }
+.GrillaMatri ul{
+  list-style: none;
+}
+.GrillaMatri a{
+  text-decoration: none;
+}
+.GrillaMatri li{
+  border: 1px solid lightgrey;
+  padding: 9px;
+  border-radius: 5px;
+  /*background-color: aqua;*/
+  text-align:left;
+  font-size: 17px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.GrillaMatri ul li a{
+  transition: all 0.3s ;
+  border-radius: 3px;
+}
+.GrillaMatri ul li a:hover{
+  background: rgb(226, 221, 221);
+  padding: 4px;
+}
+/*hasta grilla de matriculacion*/
 
 .Subtitulo{
   /*background-color: rgb(39, 37, 37);*/
@@ -174,80 +245,75 @@
 }
 
 
-.GrillaMatri ul{
+/*PARET DE CODIGO DEL INDEX.HTML */
+  /*ACA VA EL CODIGO DEL SLIDER DEL INDEX*/Ç
+  .slidergeneral{
+    /*margin: auto;*/
+    background-color: white;
+    padding: 0;
+    max-width: 90%;
+    height: 75%;
+}
+
+.slidergeneral ul, li {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
-.GrillaMatri a{
-    text-decoration: none;
-}
-.GrillaMatri li{
-    border: 1px solid lightgrey;
-    padding: 9px;
-    border-radius: 5px;
-    /*background-color: aqua;*/
-    text-align:left;
-    font-size: 17px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.GrillaMatri ul li a{
-    transition: all 0.3s ;
-    border-radius: 3px;
-}
-.GrillaMatri ul li a:hover{
-    background: rgb(226, 221, 221);
-    padding: 4px;
+
+ul.sliderfoto{
+    position:relative;
+    width: 750px;
+    height: 300px;
+  }
+
+  ul.sliderfoto li {
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
 }
 
-.redes{
-    border-bottom: solid 1px rgb(196, 190, 190);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 2px;
-}
-.redes_1:hover {filter: opacity(.6);}
-.redes_2:hover {filter: opacity(.6);}
-.redes_3:hover {filter: opacity(.6);}
-.redes_4:hover {filter: opacity(.6);}
-.redes_5:hover {filter: opacity(.6);}
+ul.sliderfoto li img{
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+  }
 
-
-.menu{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content:space-between;
-    align-items:center;
+ul.sliderfoto li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
 }
 
-.menu ul{
-    list-style: none;
+ul.sliderfoto li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
 }
-.menu ul li{
+
+.menuslider{
+    text-align: center;
+    margin: 20px;
+  }
+
+  .menuslider li{
     display: inline-block;
-}
+    text-align: center;
+  }
 
-.menu a{
-    display: block;
-    padding: 0.52rem 1rem;
-    color: rgb(77, 73, 73);
+  .menuslider li a{
+    display: inline-block;
+    color: white;
     text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 10% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 1px;
-    transition: all 0.1s linear;
-}
-.menu  a:hover, a:focus {
-    background-size: 90% 2px;
-}
-.menu_logo{
-  padding-left: 20px;
-}
-.auto a{
-    background-image:none;
-}
-.auto:hover {filter: opacity(.6);}
+    background-color: gray;
+    padding: 5px;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    border-radius: 50%;
+  }
+  /*HASTA ACA EL SLIDER*/
 
 .servicios{
   display: flex;
@@ -259,16 +325,9 @@
 
 .serv_1:hover {-webkit-transform:scale(1.1);transform:scale(1.1); transition-duration: 1.5s;}
 .serv_1 {overflow:hidden;}
+/*FIN CODIGO INDEX.HTML*/
 
-.serv_2:hover {-webkit-transform:scale(1.1);transform:scale(1.1); transition-duration: 1.5s;}
-.serv_2 {overflow:hidden;}
-
-.serv_3:hover {-webkit-transform:scale(1.1);transform:scale(1.1); transition-duration: 1.5s;}
-.serv_3 {overflow:hidden;}
-
-.serv_4:hover {-webkit-transform:scale(1.1);transform:scale(1.1); transition-duration: 1.5s;}
-.serv_4 {overflow:hidden;}
-
+/*CODIGO DE MATRICULACION HTML*/
 .Matri_importante{
   margin-top: 40px;
   border-top: 1px solid lightgray;
@@ -279,6 +338,9 @@
   font-size: 16px;
 }
 
+/*FIN MATRICULACION.HTML*/
+
+/*CODIGO EL FOOTER IGUAL PARA TODAS LOS HTML DE ESTE PROYECTO*/
 footer{
   max-width: 100%;
   background-color: rgb(82, 77, 77);
@@ -306,12 +368,4 @@ footer a{
 
 .foot_1:hover {-webkit-transform:scale(1.3);transform:scale(1.3); transition-duration: 0.5s;filter: grayscale(80%);}
 .foot_1 {overflow:hidden;}
-
-.foot_2:hover {-webkit-transform:scale(1.3);transform:scale(1.3); transition-duration: 0.5s;filter: grayscale(80%);}
-.foot_2 {overflow:hidden;}
-
-.foot_3:hover {-webkit-transform:scale(1.3);transform:scale(1.3); transition-duration: 0.5s;filter: grayscale(80%);}
-.foot_3 {overflow:hidden;}
-
-.foot_4:hover {-webkit-transform:scale(1.3);transform:scale(1.3); transition-duration: 0.5s;filter: grayscale(80%);}
-.foot_4 {overflow:hidden;}
+/* FIN FOOTER */
