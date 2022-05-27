@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <<title>Consejo Profesional de Ciencias Económicas de Córdoba</title>
+    <title>Consejo Profesional de Ciencias Económicas de Córdoba</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/Styles.css">
 </head>
+
 <body>
     <section class="grid-1">
         <header class="item-1">
             <div class="redes">
-                <a href="https://www.facebook.com/" target="_blank"> <img class="redes_opaciti" src="../img/facebook.png" alt="facebook"></a>
-                <a href="https://www.instagram.com/" target="_blank"> <img class="redes_opaciti" src="../img/instagram.png"
-                        alt="instagram"></a>
-                <a href="https://www.youtube.com/channel/UCR9GN2-i1rsunmsV4d2kvrA" target="_blank"><img class="redes_opaciti"
-                        src="../img/youtube.png" alt="youtube"></a>
-                <a href="https://web.whatsapp.com/" target="_blank"> <img class="redes_opaciti" src="../img/whatsapp3.png" alt="whatsapp"></a>
-                <a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank"><img class="redes_opaciti" src="../img/correo.png"
-                        alt="Correo"></a>
+                <a href="https://www.facebook.com/" target="_blank"> <img class="redes_opaciti"
+                        src="../img/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"> <img class="redes_opaciti"
+                        src="../img/instagram.png" alt="instagram"></a>
+                <a href="https://www.youtube.com/channel/UCR9GN2-i1rsunmsV4d2kvrA" target="_blank"><img
+                        class="redes_opaciti" src="../img/youtube.png" alt="youtube"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"> <img class="redes_opaciti"
+                        src="../img/whatsapp3.png" alt="whatsapp"></a>
+                <a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank"><img class="redes_opaciti"
+                        src="../img/correo.png" alt="Correo"></a>
             </div>
             <div class="menu">
                 <div class="auto"><a href="../pages/autogestion.html"> <img src="../img/autogestion1.png" alt=""></a>
@@ -40,8 +46,51 @@
                 <a href="../index.html">Inicio
                 </a><span> / Contacto</span>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus tempore, ad placeat dolorem nam ipsum praesentium aliquam eum, facilis similique reiciendis veritatis vitae totam. Similique quas tenetur expedita. Corrupti, eligendi!</p>
+            <div class="grilla_contacto">
+                <div id="contact1" >
+                    <h1 class="badge  bg-primary text-wrap fs-4" >Formulario de contacto</h1>
+                        <form class="row g-1">
+                            <div class="col-8">
+                                <label for="inputNombre" class="form-label">Nombre y Apellido</label>
+                                <input type="text" class="form-control" id="inputNombre" required="obligatorio"
+                                placeholder="Escribe tu nombre">
+                            </div>
+                            <div class="col-8">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" required="obligatorio"
+                                placeholder="Escribe tu Email">
+                            </div>
+                            <div class="col-6">
+                                <label for="inputTelefono" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control" id="inputEmail" required="obligatorio"
+                                placeholder="Escribe tu Teléfono">
+                            </div>
+
+                            
+                            <div class="col-12">
+                                <label for="inputcomentario" class="form-label">Comentario</label>
+                                <textarea class="form-control" id="inputcomentario" rows="3"></textarea>
+                            </div>
+                            <div class="col-12 form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Quiero recibir Noticias sobre el Cpce
+                                </label>
+                            </div>
+                            
+                            <div class="col-6">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                            
+                        </form>
+                </div>
+                <div id="contact2">
+                    <h4>Vías de comunicación</h4>
+                    <img src="../img/Matricula/contacto.png" alt="">
+                </div>
+            </div>
         </main>
+
         <div class="item-3">
             <footer>
                 <div>
@@ -67,5 +116,10 @@
             </footer>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

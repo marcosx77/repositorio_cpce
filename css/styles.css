@@ -148,6 +148,28 @@ padding-left: 20px;
 }
 /* HASTA ACA LA DEFINICION DE GRILLAS SEGUN LA PANTALLA QUE ESTE VIENDO LA PAGINA*/
 
+/*Grilla Contacto*/
+.grilla_contacto{ 
+  padding-top: 5px;
+  display: grid;
+  /*grid-template-columns: repeat(4 1fr);*/
+  grid-template-columns: 60% 40%; 
+  grid-template-rows: 1fr;
+  grid-template-areas: "contact1 contact2";
+  gap:10px;
+}
+
+#contact1{
+  grid-area: contact1;
+}
+#contact2{
+  grid-area: contact2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /*GRILLA PARA EL HTML Matriculacion*/
   .GrillaMatri{
     /*background-color: aquamarine; */
