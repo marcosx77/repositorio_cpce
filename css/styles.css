@@ -325,6 +325,9 @@ padding-left: 20px;
 
 /*FIN MATRICULACION.HTML*/
 
+.ubicacion{
+  padding-top: 20px;
+}
 /*CODIGO EL FOOTER IGUAL PARA TODAS LOS HTML DE ESTE PROYECTO*/
 footer{
   max-width: 100%;
