@@ -170,6 +170,28 @@ padding-left: 20px;
   justify-content: center;
 }
 
+/*Grilla Autogestion*/
+.grilla_autogestion{ 
+  padding-top: 1px;
+  display: grid;
+  /*grid-template-columns: repeat(4 1fr);*/
+  grid-template-columns: 35% 65%; 
+  grid-template-rows: 1fr;
+  grid-template-areas: "auto1 auto2";
+  gap:5px;
+}
+#auto1{
+  grid-area: auto1;
+}
+#auto2{
+  grid-area: auto2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content:flex-start;
+}
+
 /*GRILLA PARA EL HTML Matriculacion*/
   .GrillaMatri{
     /*background-color: aquamarine; */
