@@ -11,6 +11,27 @@
   background-color: lightgray;
   border: 1px solid black;
 }
+.borde_derecho{
+  border-right: 0.5px solid gray;
+}
+
+.Subtitulo{
+  /*background-color: rgb(39, 37, 37);*/
+  background-image: linear-gradient(to right, rgb(233, 227, 227),rgb(131, 125, 125));
+  padding: 10px;
+  max-width: 100%;
+  padding-left: 10%; 
+  margin-bottom: 15px;
+}
+.Subtitulo h2{
+  font-size: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: normal;
+}
+.Subtitulo a{
+  text-decoration: none;
+}
+
 
 /*encabezado de pagina esto es igual para todos los html de este proyecto*/
 .redes{
@@ -148,6 +169,41 @@ padding-left: 20px;
 }
 /* HASTA ACA LA DEFINICION DE GRILLAS SEGUN LA PANTALLA QUE ESTE VIENDO LA PAGINA*/
 
+
+/*Grilla Ubicacion*/
+.grilla_ubicacion{ 
+  padding-top: 5px;
+  display: grid;
+  /*grid-template-columns: repeat(4 1fr);*/
+  grid-template-columns: 60% 40%; 
+  grid-template-rows: 1fr;
+  grid-template-areas: "ubica1 ubica2";
+  gap:10px;
+}
+#ubica1{
+  grid-area: ubica1;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  justify-items:left;
+}
+
+.tit_ubica{
+  font-size: 1.3rem;
+}
+#ubica2{
+  grid-area: ubica2;
+  display: flex;
+  flex-direction: column;
+ /* align-items: center;
+  justify-content: center;*/
+}
+#ubica2 p {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.75rem;
+}
+
+
 /*Grilla Contacto*/
 .grilla_contacto{ 
   padding-top: 5px;
@@ -166,8 +222,12 @@ padding-left: 20px;
   grid-area: contact2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ /* align-items: center;
+  justify-content: center;*/
+}
+#contact2 p {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.75rem;
 }
 
 /*Grilla Autogestion*/
@@ -221,9 +281,6 @@ padding-left: 20px;
     padding-left: 20px;
 }
 
-.img_matri:hover {-webkit-transform:scale(1.02);transform:scale(1.02);transition-duration: 0.9s;filter: grayscale(80%)}
-.img_matri {overflow:hidden;}
-
 
 #img3{
     grid-area: img3;
@@ -273,22 +330,6 @@ padding-left: 20px;
 }
 /*hasta grilla de matriculacion*/
 
-.Subtitulo{
-  /*background-color: rgb(39, 37, 37);*/
-  background-image: linear-gradient(to right, rgb(233, 227, 227),rgb(131, 125, 125));
-  padding: 10px;
-  max-width: 100%;
-  padding-left: 10%; 
-  margin-bottom: 15px;  
-}
-.Subtitulo h2{
-  font-size: 25px;
-}
-.Subtitulo a{
-  text-decoration: none;
-}
-
-
 /*PARET DE CODIGO DEL INDEX.HTML */
   /*ACA VA EL CODIGO DEL SLIDER DEL INDEX*/
 
@@ -323,8 +364,19 @@ padding-left: 20px;
   font-size: 16px;
 }
 
-/*FIN MATRICULACION.HTML*/
+.img_matri:hover {-webkit-transform:scale(1.02);transform:scale(1.02);transition-duration: 0.9s;filter: grayscale(80%)}
+.img_matri {overflow:hidden;}
 
+/*FIN MATRICULACION.HTML*/
+/*CODIGO SERVICIOS_SOCIALES.HTML*/
+.sspading{
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+/*.img_ss:hover  {filter: grayscale(80%);}*/
+.img_ss:hover {-webkit-transform:scale(1.02);transform:scale(1.02);transition-duration: 0.9s;filter: grayscale(80%)}
+.img_ss {overflow:hidden;}
+/*HASTA ACA SERVICIOS SOCIALES*/
 .ubicacion{
   padding-top: 20px;
 }
