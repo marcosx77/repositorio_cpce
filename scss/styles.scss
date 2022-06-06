@@ -1,0 +1,544 @@
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    font-family:$fuente_general;
+    font-size: 1rem;
+    line-height: 1.4em;
+}
+
+.borde {
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.borde_derecho {
+    border-right: 0.5px solid gray;
+}
+
+.Subtitulo {
+    /*background-color: rgb(39, 37, 37);*/
+    background-image: linear-gradient(to right, rgb(233, 227, 227), rgb(131, 125, 125));
+    padding: 10px;
+    max-width: 100%;
+    padding-left: 10%;
+    margin-bottom: 15px;
+
+    h2 {
+        font-size: 25px;
+        /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+        font-family:$fuente_subtitulo;
+        font-weight: normal;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+/*encabezado de pagina esto es igual para todos los html de este proyecto*/
+.redes {
+    border-bottom: solid 1px rgb(196, 190, 190);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2px;
+}
+
+.redes_opaciti:hover {
+    filter: opacity(.6);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+        }
+    }
+    a {
+        display: block;
+        padding: 0.52rem 1rem;
+        color: rgb(77, 73, 73);
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 10% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: all 0.1s linear;
+    }
+}
+
+.menu a:hover,
+a:focus {
+    background-size: 90% 2px;
+}
+
+.menu_logo {
+    padding-left: 20px;
+}
+
+.auto a {
+    background-image: none;
+}
+
+.auto:hover {
+    filter: opacity(.6);
+}
+
+/* hasta aca el encabezado*/
+
+/*CONFIGURACION DE MEDIA QUERIS PARA QUE LA PANTALLA SE ADAPTATIVA*/
+@media only screen and (min-width:10px) and (max-width:480px) {
+    .grid-1 {
+        display: grid;
+        width: 100%;
+        margin: 0 auto;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr 15%;
+        grid-gap: 5px;
+
+        grid-template-areas: "header"
+            "main"
+            "footer";
+    }
+}
+
+/*Acá empiezo a definir las reglas para los diferentes tamaños de pantalla. Solo especifico lo que cambia, lo que se mantiene no hace falta volver a declararlo*/
+@media only screen and (min-width:481px) and (max-width:968px) {
+    .grid-1 {
+        display: grid;
+        width: 100%;
+        /*max-width: 770px;*/
+        margin: 0 auto;
+
+        grid-template-columns: 7% 1fr 7%;
+        grid-template-rows: 150px 1fr 15%;
+        grid-gap: 5px;
+
+        grid-template-areas: "header header sidebar"
+            "main  main  sidebar"
+            "footer footer footer";
+    }
+
+    .item-4 {
+        grid-area: sidebar;
+    }
+}
+
+@media only screen and (min-width:969px) {
+    .grid-1 {
+        display: grid;
+        width: 100%;
+        /*max-width: 770px;*/
+        margin: 0 auto;
+
+        grid-template-columns: 7% 1fr 7%;
+        grid-template-rows: 150px 1fr 15%;
+        grid-gap: 5px;
+
+        grid-template-areas: "nav  header  sidebar"
+            "nav    main    sidebar"
+            "footer   footer   footer";
+    }
+
+    .item-4 {
+        grid-area: sidebar;
+    }
+
+    .item-5 {
+        grid-area: nav;
+    }
+}
+
+
+.item-1 {
+    grid-area: header;
+}
+
+.item-2 {
+    /*background: #33a8a5;*/
+    grid-area: main;
+    /*max-width: 80%;*/
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+.item-3 {
+    grid-area: footer;
+}
+
+.item-1 {
+    /*max-width: 95%;*/
+    padding: 1rem;
+    /*max-height: 30%;*/
+    margin: 0 auto;
+}
+
+/* HASTA ACA LA DEFINICION DE GRILLAS SEGUN LA PANTALLA QUE ESTE VIENDO LA PAGINA*/
+
+/*Grilla Ubicacion*/
+.grilla_ubicacion {
+    padding-top: 5px;
+    display: grid;
+    /*grid-template-columns: repeat(4 1fr);*/
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "ubica1 ubica2";
+    gap: 10px;
+}
+
+#ubica1 {
+    grid-area: ubica1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: left;
+}
+
+.tit_ubica {
+    font-size: 1.3rem;
+    font-family: $fuente_general;
+}
+
+#ubica2 {
+    grid-area: ubica2;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-family: $fuente_contacto;
+        font-size: 0.75rem;
+    }
+}
+
+/*Grilla Contacto*/
+.grilla_contacto {
+    padding-top: 5px;
+    display: grid;
+    /*grid-template-columns: repeat(4 1fr);*/
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "contact1 contact2";
+    gap: 10px;
+}
+
+#contact1 {
+    grid-area: contact1;
+}
+
+#contact2 {
+    grid-area: contact2;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-family: $fuente_contacto;
+        font-size: 0.75rem;
+    }
+}
+
+/*Grilla Autogestion*/
+.grilla_autogestion {
+    padding-top: 1px;
+    display: grid;
+    /*grid-template-columns: repeat(4 1fr);*/
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "auto1 auto2";
+    gap: 5px;
+}
+
+#auto1 {
+    grid-area: auto1;
+}
+
+#auto2 {
+    grid-area: auto2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*GRILLA PARA EL HTML Matriculacion*/
+.GrillaMatri {
+    /*background-color: aquamarine; */
+    padding-top: 5px;
+    display: grid;
+    /*grid-template-columns: repeat(4 1fr);*/
+    grid-template-columns: 20% auto auto 20%;
+    grid-template-rows: repeat(4 250px);
+    grid-template-areas: "img1 img2 img2 img7"
+        "img1 img3 img3 img7"
+        "img1 img4 img4 img6"
+        "img1 img5 img5 img6";
+    gap: 10px;
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        border: 1px solid lightgrey;
+        padding: 9px;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 17px;
+        font-family: $fuente_texto;
+    }
+
+    ul li a {
+        transition: all 0.3s;
+        border-radius: 3px;
+    }
+
+    ul li a:hover {
+        background: rgb(226, 221, 221);
+        padding: 4px;
+    }
+}
+
+
+#img0 {
+    grid-area: img0;
+}
+
+#img1 {
+    grid-area: img1;
+
+    li a {
+        color: black;
+    }
+}
+
+#img2 {
+    grid-area: img2;
+    padding-left: 20px;
+}
+
+#img3 {
+    grid-area: img3;
+    padding-left: 20px;
+}
+
+#img4 {
+    grid-area: img4;
+    padding-left: 20px;
+}
+
+#img5 {
+    grid-area: img5;
+    padding-left: 20px;
+}
+
+#img6 {
+    grid-area: img6;
+}
+
+#img7 {
+    grid-area: img7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*hasta grilla de matriculacion*/
+
+/*PARET DE CODIGO DEL INDEX.HTML */
+/*ACA VA EL CODIGO DEL SLIDER DEL INDEX*/
+
+.sliderF {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/*HASTA ACA EL SLIDER*/
+.servicios {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.serv_1:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition-duration: 1.5s;
+}
+
+.serv_1 {
+    overflow: hidden;
+}
+
+/*FIN CODIGO INDEX.HTML*/
+
+/*CODIGO DE MATRICULACION HTML*/
+.Matri_importante {
+    margin-top: 40px;
+    border-top: lightgray solid 5px;
+    padding-top: 10px;
+
+    p {
+        font-size: 16px;
+        font-family: $fuente_texto;
+    }
+}
+
+.img_matri:hover {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    transition-duration: 0.9s;
+    filter: grayscale(80%)
+}
+
+.img_matri {
+    overflow: hidden;
+}
+
+/*FIN MATRICULACION.HTML*/
+/*CODIGO SERVICIOS_SOCIALES.HTML*/
+.sspading {
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+/*.img_ss:hover  {filter: grayscale(80%);}*/
+.img_ss:hover {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    transition-duration: 0.9s;
+    filter: grayscale(80%)
+}
+
+.img_ss {
+    overflow: hidden;
+}
+
+/*HASTA ACA SERVICIOS SOCIALES*/
+.ubicacion {
+    padding-top: 20px;
+}
+
+/*tecnica html */
+.tecnica_foto {
+    margin-left: 20%;
+    padding-bottom: 20px;
+}
+
+.tecnica_submenu {
+    padding-bottom: 35px;
+
+    a {
+        font-size: 18px;
+        /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+        font-family: $fuente_texto;
+        font-weight: normal;
+    }
+}
+
+.tecnica_covid a {
+    text-decoration: none;
+    color: white;
+}
+
+.tecnica_caja {
+    border-top: lightgray solid 5px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    font-family: $fuente_texto;
+}
+
+.tecnica_tit {
+    font-family: $fuente_texto;
+    color: rgb(77, 138, 77);
+    font-weight: bold;
+}
+
+.tecnica_subtit {
+    font-family: $fuente_texto;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.tecnica_texto {
+    font-family: $fuente_texto;
+    padding: 0;
+    padding-bottom: 5PX;
+    margin: 0;
+    font-size: 15px;
+}
+
+.tecnica_lista li {
+    font-family: $fuente_texto;
+    padding-top: 8px;
+    margin-left: 20px;
+}
+
+.tecnica_varios a {
+    font-family: $fuente_texto;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/*hasta aca tecnica*/
+
+/*CODIGO EL FOOTER IGUAL PARA TODAS LOS HTML DE ESTE PROYECTO*/
+footer {
+    max-width: 100%;
+    background-color: rgb(82, 77, 77);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 7rem;
+
+    ul {
+        list-style: none;
+    }
+
+    ul li {
+        display: inline-block;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+}
+
+.foot_1:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    transition-duration: 0.5s;
+    filter: grayscale(80%);
+}
+
+.foot_1 {
+    overflow: hidden;
+}
+
+/* FIN FOOTER */
