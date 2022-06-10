@@ -42,18 +42,25 @@
         </header>
 
         <main class="item-2">
-            <div class="Subtitulo">
+            <div class="Subtitulo shadow">
                 <h2>Tecnica</h2>
                 <a href="../index.html">Inicio
                 </a><span> / Tecnica</span>
             </div>
 
-            <div class=" shadow p-3 mb-5  rounded bg-danger text-white tecnica_covid">
-                <h3>Covid-19</h3>
-                <a href="https://cpcecba.org.ar/coronavirus/secretaria-tecnica/504/">
-                    <p>PROCEDIMIENTO DE EXCEPCIÓN PARA LA PRESENTACIÓN DE TRÁMITES DURANTE EL PERÍODO DE AISLAMIENTO
-                        SOCIAL Y PREVENTIVO.-</p>
-                </a>
+            <div class="alert alert-primary bg-danger  bg-danger text-white d-flex align-items-center shadow"
+                role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"
+                    aria-label="Warning:">
+                    <path
+                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg>
+                <div>
+                    <h4 class="alert-heading">Covid-19</h4>
+                    PROCEDIMIENTO DE EXCEPCIÓN PARA LA PRESENTACIÓN DE TRÁMITES DURANTE EL PERÍODO DE AISLAMIENTO
+                    SOCIAL Y PREVENTIVO.
+                </div>
             </div>
 
             <div>
@@ -98,18 +105,18 @@
             </ul>
 
             <div class="tecnica_caja">
-                <h4 class="tecnica_tit">Horarios de atención para recepción de trámites y gestiones presenciales.</h4>
+                <p class="tecnica_tit">Horarios de atención para recepción de trámites y gestiones presenciales.</p>
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h6 class="tecnica_subtit">Sede Central</h6>
+                            <p class="tecnica_subtit">Sede Central</p>
                             <p class="tecnica_texto">Hipolito Yrigoyen 490</p>
                             <p class="tecnica_texto">Buenos Aires 865</p>
                             <p class="tecnica_texto">Lunes a viernes de 7:30 a 15:15 hs.</p>
                             <p class="tecnica_texto">Tel.: (0351) 4688300</p>
                         </div>
                         <div class="col">
-                            <h6 class="tecnica_subtit"> Sede Zona Noroeste - Argüello</h6>
+                            <p class="tecnica_subtit"> Sede Zona Noroeste - Argüello</p>
                             <p class="tecnica_texto">Ricardo Rojas 6657</p>
                             <p class="tecnica_texto">(5021 ) ARGUELLO</p>
                             <p class="tecnica_texto">Lunes a viernes de 07:30 a 15:15 hs.</p>
@@ -117,13 +124,13 @@
                         </div>
                     </div>
 
-                    <h6 class="tecnica_subtit">Delegaciones y Sub delegaciones del interior</h6>
+                    <p class="tecnica_subtit">Delegaciones y Sub delegaciones del interior</p>
                     <p class="tecnica_texto">Consultar domicilios, teléfonos y horarios de atención en la sección <samp>
                             <a href="https://cpcecba.org.ar/delegaciones">Delegaciones</a></samp> de nuestras web.</p>
                 </div>
             </div>
             <div class="tecnica_caja">
-                <h4 class="tecnica_tit">Valores y Aranceles de legalización vigentes</h4>
+                <p class="tecnica_tit">Valores y Aranceles de legalización vigentes</p>
                 <p class="tecnica_texto">A partir del 1º DE ENERO DE 2022, regirán los siguientes valores de: </p>
                 <ul class="tecnica_lista">
                     <li>MANIFESTACION DE BIENES Y DEUDAS PERSONALES: Aquellas cuya suma de Activo más Pasivo sea hasta
@@ -138,7 +145,7 @@
                 </ul>
             </div>
             <div class="tecnica_caja">
-                <h4 class="tecnica_tit">Guía para presentar y legalizar informes sobre Estados Contables</h4>
+                <p class="tecnica_tit">Guía para presentar y legalizar informes sobre Estados Contables</p>
                 <p class="tecnica_texto">DOS ALTERNATIVAS DE PRESENTACIÓN DE TRAMITES VIGENTES:
                     - Para obtener la Legalización física con obleas autoadhesivas de informes sobre Estados Contables o
                     Patrimoniales que son presentados con documentación impresa y firma ológrafa en original en
@@ -176,7 +183,7 @@
                 </ul>
             </div>
             <div class="tecnica_caja">
-                <h4 class="tecnica_tit">Modelos de Hojas y Obleas de seguridad vigentes</h4>
+                <p class="tecnica_tit">Modelos de Hojas y Obleas de seguridad vigentes</p>
                 <img src="../img/Tecnica/Hojas_vigentes.png" alt="hojas_vigentes">
                 <p class="tecnica_texto">Todos los modelos de hojas seguridad vendidos por Consejo son válidos.-
                     Se encuentra habilitados el Uso doble faz de las hojas de seguridad , Ver <samp> <a
@@ -189,34 +196,48 @@
             </div>
 
             <div class="container tecnica_caja">
-                <h4 class="tecnica_tit">Varios</h4>
+                <p class="tecnica_tit">Varios</p>
                 <div class="row tecnica_varios">
                     <div class="col-3">
-                        <img  src="../img/Tecnica/Varios1.png" alt="varios1">
-                        <p> <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17227">Una web colabora en la confección de EECC</a></p>
+                        <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17227"> <img
+                                src="../img/Tecnica/varios1.png" alt="varios1">
+                            <p>Una web colabora en la confección de EECC</p>
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img src="../img/Tecnica/Varios2.png" alt="varios2">
-                        <p> <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17227"> Recuerde que una plataforma web facilita los EECC</a></p>
-                        
+                        <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17227"> <img
+                                src="../img/Tecnica/varios2.png" alt="varios2">
+                            <p>Recuerde que una plataforma web facilita los EECC</p>
+                        </a>
+
                     </div>
                     <div class="col-3">
-                        <img src="../img/Tecnica/Varios3.png" alt="varios3">
-                        <p> <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17227"> Repase opciones de pagos en la Secretaría Técnica</a></p>
+                        <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17227"> <img
+                                src="../img/Tecnica/varios3.png" alt="varios3">
+                            <p>Repase opciones de pagos en la Secretaría Técnica</p>
+                        </a>
                     </div>
                 </div>
                 <div class="row tecnica_varios">
                     <div class="col-3">
-                        <img  src="../img/Tecnica/Varios4.png" alt="varios4">
-                        <p> <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17194">Secretaría Técnica ofrece guías prácticas a los matriculados</a></p>
+                        <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17194"> <img
+                                src="../img/Tecnica/varios4.png" alt="varios4">
+                            <p>Secretaría Técnica ofrece guías prácticas a los matriculados</p>
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img src="../img/Tecnica/Varios5.png" alt="varios5">
-                        <p> <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17063">Secretaría Técnica cuenta con varias opciones de pago</a></p>
+
+                        <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17063"> <img
+                                src="../img/Tecnica/varios5.png" alt="varios5">
+                            <p> Secretaría Técnica cuenta con varias opciones de pago</p>
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img src="../img/Tecnica/Varios6.png" alt="varios3">
-                        <p> <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17117">Hay guías prácticas a disposición del matriculado</a></p>
+
+                        <a href="https://cpcecba.org.ar/tecnica/default?action=SHOWNOTICIAS&idn=17117"> <img
+                                src="../img/Tecnica/varios6.png" alt="varios3">
+                            <p>Hay guías prácticas a disposición del matriculado</p>
+                        </a>
                     </div>
                 </div>
             </div>

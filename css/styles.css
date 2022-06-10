@@ -298,12 +298,9 @@ a:focus {
 /*FIN CODIGO INDEX.HTML*/
 /*CODIGO DE MATRICULACION HTML*/
 .Matri_importante {
-  margin-top: 40px;
   border-top: lightgray solid 5px;
-  padding-top: 10px; }
-  .Matri_importante p {
-    font-size: 16px;
-    font-family: "Trebuchet MS"; }
+  padding-bottom: 20px;
+  padding-top: 15px; }
 
 .img_matri:hover {
   -webkit-transform: scale(1.02);
@@ -342,9 +339,9 @@ a:focus {
 .tecnica_submenu {
   padding-bottom: 35px; }
   .tecnica_submenu a {
-    font-size: 18px;
-    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     font-family: "Trebuchet MS";
+    font-size: 18PX;
+    color: black;
     font-weight: normal; }
 
 .tecnica_covid a {
@@ -354,36 +351,47 @@ a:focus {
 .tecnica_caja {
   border-top: lightgray solid 5px;
   padding-bottom: 20px;
-  padding-top: 15px;
-  font-family: "Trebuchet MS"; }
+  padding-top: 15px; }
 
 .tecnica_tit {
   font-family: "Trebuchet MS";
+  font-size: 1.4em;
   color: #4d8a4d;
   font-weight: bold; }
 
 .tecnica_subtit {
   font-family: "Trebuchet MS";
-  font-size: 20px;
+  font-size: 19px;
   color: black;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-bottom: 4px;
+  padding-top: 5px; }
 
 .tecnica_texto {
   font-family: "Trebuchet MS";
+  font-size: 15px;
+  color: black;
+  font-weight: normal;
   padding: 0;
-  padding-bottom: 5PX;
   margin: 0;
-  font-size: 15px; }
+  padding-bottom: 5px; }
 
 .tecnica_lista li {
   font-family: "Trebuchet MS";
+  font-size: 15px;
+  color: black;
+  font-weight: normal;
   padding-top: 8px;
   margin-left: 20px; }
 
 .tecnica_varios a {
-  font-family: "Trebuchet MS";
-  text-decoration: none;
-  font-size: 14px; }
+  text-decoration: none; }
+  .tecnica_varios a p {
+    font-family: "Trebuchet MS";
+    font-size: 14px;
+    color: gray;
+    font-weight: normal;
+    text-decoration: none; }
 
 /*hasta aca tecnica*/
 /*CODIGO EL FOOTER IGUAL PARA TODAS LOS HTML DE ESTE PROYECTO*/

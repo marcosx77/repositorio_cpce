@@ -5,3 +5,10 @@ $fuente_subtitulo:'Trebuchet MS';
 $fuente_texto:'Trebuchet MS';
 $fuente_contacto:'Segoe UI';
 
+@mixin parrafos_generales ($fuente, $color, $tamano, $negrita){
+    font-family: $fuente;
+    font-size: $tamano;
+    color: $color;
+    font-weight: $negrita;
+}
+

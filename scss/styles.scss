@@ -394,14 +394,9 @@ a:focus {
 
 /*CODIGO DE MATRICULACION HTML*/
 .Matri_importante {
-    margin-top: 40px;
     border-top: lightgray solid 5px;
-    padding-top: 10px;
-
-    p {
-        font-size: 16px;
-        font-family: $fuente_texto;
-    }
+    padding-bottom: 20px;
+    padding-top: 15px;
 }
 
 .img_matri:hover {
@@ -449,10 +444,7 @@ a:focus {
     padding-bottom: 35px;
 
     a {
-        font-size: 18px;
-        /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
-        font-family: $fuente_texto;
-        font-weight: normal;
+        @include parrafos_generales($fuente_texto,black,18PX,normal);
     }
 }
 
@@ -465,40 +457,37 @@ a:focus {
     border-top: lightgray solid 5px;
     padding-bottom: 20px;
     padding-top: 15px;
-    font-family: $fuente_texto;
 }
 
 .tecnica_tit {
-    font-family: $fuente_texto;
-    color: rgb(77, 138, 77);
-    font-weight: bold;
+    @include parrafos_generales($fuente_texto,rgb(77, 138, 77),1.4em,bold);
 }
 
 .tecnica_subtit {
-    font-family: $fuente_texto;
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
+    @include parrafos_generales( $fuente_texto,black,19px,bold);
+    padding-bottom:4px;
+    padding-top: 5px;
 }
 
 .tecnica_texto {
-    font-family: $fuente_texto;
+    @include parrafos_generales($fuente_texto,black,15px, normal);
     padding: 0;
-    padding-bottom: 5PX;
-    margin: 0;
-    font-size: 15px;
+    margin:0;
+    padding-bottom: 5px;
 }
 
 .tecnica_lista li {
-    font-family: $fuente_texto;
+    @include parrafos_generales($fuente_texto,black,15px, normal);
     padding-top: 8px;
     margin-left: 20px;
 }
 
 .tecnica_varios a {
-    font-family: $fuente_texto;
     text-decoration: none;
-    font-size: 14px;
+    p {
+        @include parrafos_generales($fuente_texto,gray,14px, normal);
+        text-decoration: none;
+        }
 }
 
 /*hasta aca tecnica*/
