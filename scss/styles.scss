@@ -1,5 +1,10 @@
 @import "variables";
 
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -323,7 +328,7 @@ a:focus {
     grid-area: img1;
 
     li a {
-        color: black;
+        color: color(texto_gral);
     }
 }
 
@@ -380,6 +385,9 @@ a:focus {
     padding-top: 15px;
 }
 
+.lista_youtube{
+    padding-top: 3rem;
+}
 .serv_1:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -444,7 +452,7 @@ a:focus {
     padding-bottom: 35px;
 
     a {
-        @include parrafos_generales($fuente_texto,black,18PX,normal);
+        @include parrafos_generales($fuente_texto,color(texto_gral),18PX,normal);
     }
 }
 
@@ -460,24 +468,27 @@ a:focus {
 }
 
 .tecnica_tit {
-    @include parrafos_generales($fuente_texto,rgb(77, 138, 77),1.4em,bold);
+    @include parrafos_generales($fuente_texto,color(texto_subtit),1.4em,bold);
 }
 
 .tecnica_subtit {
-    @include parrafos_generales( $fuente_texto,black,19px,bold);
+    @include parrafos_generales( $fuente_texto,color(texto_gral),19px,bold);
     padding-bottom:4px;
     padding-top: 5px;
 }
 
 .tecnica_texto {
-    @include parrafos_generales($fuente_texto,black,15px, normal);
+    @include parrafos_generales($fuente_texto,color(texto_gral),15px, normal);
     padding: 0;
     margin:0;
     padding-bottom: 5px;
+    strong{
+        font-family: $fuente_texto;
+    }
 }
 
 .tecnica_lista li {
-    @include parrafos_generales($fuente_texto,black,15px, normal);
+    @include parrafos_generales($fuente_texto,color(texto_gral),15px, normal);
     padding-top: 8px;
     margin-left: 20px;
 }
@@ -485,7 +496,7 @@ a:focus {
 .tecnica_varios a {
     text-decoration: none;
     p {
-        @include parrafos_generales($fuente_texto,gray,14px, normal);
+        @include parrafos_generales($fuente_texto,color(texto_img),14px, normal);
         text-decoration: none;
         }
 }
@@ -501,7 +512,7 @@ footer {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    color: white;
+    color: color(texto_pie);
     height: 7rem;
 
     ul {
@@ -513,9 +524,12 @@ footer {
     }
 
     a {
-        color: white;
+        color: color(texto_pie);
         text-decoration: none;
         padding: 10px;
+    }
+    p{
+        color:color(texto_pie)
     }
 }
 

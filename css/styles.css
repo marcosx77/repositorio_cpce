@@ -287,6 +287,9 @@ a:focus {
   justify-content: space-around;
   padding-top: 15px; }
 
+.lista_youtube {
+  padding-top: 3rem; }
+
 .serv_1:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -375,6 +378,8 @@ a:focus {
   padding: 0;
   margin: 0;
   padding-bottom: 5px; }
+  .tecnica_texto strong {
+    font-family: "Trebuchet MS"; }
 
 .tecnica_lista li {
   font-family: "Trebuchet MS";
@@ -413,6 +418,8 @@ footer {
     color: white;
     text-decoration: none;
     padding: 10px; }
+  footer p {
+    color: white; }
 
 .foot_1:hover {
   -webkit-transform: scale(1.3);
