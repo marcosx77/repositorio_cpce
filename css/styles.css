@@ -1,36 +1,5 @@
 @charset "UTF-8";
 /*fuentes*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /*font-family: Georgia, 'Times New Roman', Times, serif;*/
-  font-family: "Georgia";
-  font-size: 1rem;
-  line-height: 1.4em; }
-
-.borde {
-  background-color: lightgray;
-  border: 1px solid black; }
-
-.borde_derecho {
-  border-right: 0.5px solid gray; }
-
-.Subtitulo {
-  /*background-color: rgb(39, 37, 37);*/
-  background-image: linear-gradient(to right, #e9e3e3, #837d7d);
-  padding: 10px;
-  max-width: 100%;
-  padding-left: 10%;
-  margin-bottom: 15px; }
-  .Subtitulo h2 {
-    font-size: 25px;
-    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
-    font-family: "Trebuchet MS";
-    font-weight: normal; }
-  .Subtitulo a {
-    text-decoration: none; }
-
 /*encabezado de pagina esto es igual para todos los html de este proyecto*/
 .redes {
   border-bottom: solid 1px #c4bebe;
@@ -77,6 +46,37 @@ a:focus {
   filter: opacity(0.6); }
 
 /* hasta aca el encabezado*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+  font-family: "Georgia";
+  font-size: 1rem;
+  line-height: 1.4em; }
+
+.borde {
+  background-color: lightgray;
+  border: 1px solid black; }
+
+.borde_derecho {
+  border-right: 0.5px solid gray; }
+
+.Subtitulo {
+  /*background-color: rgb(39, 37, 37);*/
+  background-image: linear-gradient(to right, #e9e3e3, #837d7d);
+  padding: 10px;
+  max-width: 100%;
+  padding-left: 10%;
+  margin-bottom: 15px; }
+  .Subtitulo h2 {
+    font-size: 25px;
+    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+    font-family: "Trebuchet MS";
+    font-weight: normal; }
+  .Subtitulo a {
+    text-decoration: none; }
+
 /*CONFIGURACION DE MEDIA QUERIS PARA QUE LA PANTALLA SE ADAPTATIVA*/
 @media only screen and (min-width: 10px) and (max-width: 480px) {
   .grid-1 {
@@ -84,7 +84,7 @@ a:focus {
     width: 100%;
     margin: 0 auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 1fr 15%;
+    grid-template-rows: 1/2fr 1fr 15%;
     grid-gap: 5px;
     grid-template-areas: "header" "main" "footer"; } }
 
@@ -96,7 +96,7 @@ a:focus {
     /*max-width: 770px;*/
     margin: 0 auto;
     grid-template-columns: 7% 1fr 7%;
-    grid-template-rows: 150px 1fr 15%;
+    grid-template-rows: 1/2fr 1fr 15%;
     grid-gap: 5px;
     grid-template-areas: "header header sidebar" "main  main  sidebar" "footer footer footer"; }
   .item-4 {
@@ -109,7 +109,7 @@ a:focus {
     /*max-width: 770px;*/
     margin: 0 auto;
     grid-template-columns: 7% 1fr 7%;
-    grid-template-rows: 150px 1fr 15%;
+    grid-template-rows: 1/2fr 1fr 15%;
     grid-gap: 5px;
     grid-template-areas: "nav  header  sidebar" "nav    main    sidebar" "footer   footer   footer"; }
   .item-4 {
@@ -118,7 +118,9 @@ a:focus {
     grid-area: nav; } }
 
 .item-1 {
-  grid-area: header; }
+  grid-area: header;
+  margin: 0 auto;
+  padding-top: 1 rem; }
 
 .item-2 {
   /*background: #33a8a5;*/
@@ -132,9 +134,8 @@ a:focus {
 
 .item-1 {
   /*max-width: 95%;*/
-  padding: 1rem;
-  /*max-height: 30%;*/
-  margin: 0 auto; }
+  /*padding: 1rem;*/
+  /*max-height: 30%;*/ }
 
 /* HASTA ACA LA DEFINICION DE GRILLAS SEGUN LA PANTALLA QUE ESTE VIENDO LA PAGINA*/
 /*Grilla Ubicacion*/

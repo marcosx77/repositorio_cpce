@@ -1,9 +1,9 @@
 @import "variables";
+@import "header";
 
 @function color($color-name) {
     @return map-get($colors, $color-name);
 }
-
 
 * {
     margin: 0;
@@ -44,63 +44,7 @@
     }
 }
 
-/*encabezado de pagina esto es igual para todos los html de este proyecto*/
-.redes {
-    border-bottom: solid 1px rgb(196, 190, 190);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 2px;
-}
 
-.redes_opaciti:hover {
-    filter: opacity(.6);
-}
-
-.menu {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-
-    ul {
-        list-style: none;
-        li {
-            display: inline-block;
-        }
-    }
-    a {
-        display: block;
-        padding: 0.52rem 1rem;
-        color: rgb(77, 73, 73);
-        text-decoration: none;
-        background-image: linear-gradient(currentColor, currentColor);
-        background-position: 10% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 1px;
-        transition: all 0.1s linear;
-    }
-}
-
-.menu a:hover,
-a:focus {
-    background-size: 90% 2px;
-}
-
-.menu_logo {
-    padding-left: 20px;
-}
-
-.auto a {
-    background-image: none;
-}
-
-.auto:hover {
-    filter: opacity(.6);
-}
-
-/* hasta aca el encabezado*/
 
 /*CONFIGURACION DE MEDIA QUERIS PARA QUE LA PANTALLA SE ADAPTATIVA*/
 @media only screen and (min-width:10px) and (max-width:480px) {
@@ -110,7 +54,7 @@ a:focus {
         margin: 0 auto;
 
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 1fr 15%;
+        grid-template-rows: 1/2fr 1fr 15%;
         grid-gap: 5px;
 
         grid-template-areas: "header"
@@ -128,7 +72,7 @@ a:focus {
         margin: 0 auto;
 
         grid-template-columns: 7% 1fr 7%;
-        grid-template-rows: 150px 1fr 15%;
+        grid-template-rows: 1/2fr 1fr 15%;
         grid-gap: 5px;
 
         grid-template-areas: "header header sidebar"
@@ -149,7 +93,7 @@ a:focus {
         margin: 0 auto;
 
         grid-template-columns: 7% 1fr 7%;
-        grid-template-rows: 150px 1fr 15%;
+        grid-template-rows: 1/2fr 1fr 15%;
         grid-gap: 5px;
 
         grid-template-areas: "nav  header  sidebar"
@@ -169,6 +113,8 @@ a:focus {
 
 .item-1 {
     grid-area: header;
+    margin: 0 auto;
+    padding-top: 1 rem;
 }
 
 .item-2 {
@@ -185,9 +131,9 @@ a:focus {
 
 .item-1 {
     /*max-width: 95%;*/
-    padding: 1rem;
+    /*padding: 1rem;*/
     /*max-height: 30%;*/
-    margin: 0 auto;
+    
 }
 
 /* HASTA ACA LA DEFINICION DE GRILLAS SEGUN LA PANTALLA QUE ESTE VIENDO LA PAGINA*/
