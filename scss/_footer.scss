@@ -1,5 +1,7 @@
 /*CODIGO EL FOOTER IGUAL PARA TODAS LOS HTML DE ESTE PROYECTO*/
 
+@import "variables";
+
 @function color_pie($color-name) {
     @return map-get($colors, $color-name);
 }
@@ -20,16 +22,18 @@ footer {
     }
 
     ul li {
-        display: inline-block;
+       /* display: inline-block;*/
     }
 
     a {
         color: color_pie(texto_pie);
         text-decoration: none;
         padding: 10px;
+        font-family:$fuente_texto;
     }
     p{
-        color:color_pie(texto_pie)
+        font-family:$fuente_texto;
+        color:color_pie(texto_pie);
     }
 }
 

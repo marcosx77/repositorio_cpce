@@ -48,6 +48,7 @@ a:focus {
 
 /* hasta aca el encabezado*/
 /*CODIGO EL FOOTER IGUAL PARA TODAS LOS HTML DE ESTE PROYECTO*/
+/*fuentes*/
 footer {
   max-width: 100%;
   background-color: #524d4d;
@@ -61,12 +62,14 @@ footer {
   footer ul {
     list-style: none; }
   footer ul li {
-    display: inline-block; }
+    /* display: inline-block;*/ }
   footer a {
     color: white;
     text-decoration: none;
-    padding: 10px; }
+    padding: 10px;
+    font-family: "Trebuchet MS"; }
   footer p {
+    font-family: "Trebuchet MS";
     color: white; }
 
 .foot_1:hover {
